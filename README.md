@@ -70,23 +70,11 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-## 📁 Project Structure
-```
-credit-risk-model/
-│── main.py
-│── prediction_helper.py
-│── requirements.txt
-│── artifacts/
-│    ├── model.pkl
-│    ├── scaler.pkl
-│── README.md
-│── .gitignore
-```
 
 ## 📈 Model Output
 - **Default Probability (0–1)**  
 - **Credit Score (0–900)**  
 - **Rating:** Poor / Average / Good / Excellent  
 
-## 👨‍💻 Author
+## Author
 **Ayush Radharaman Pandey**
