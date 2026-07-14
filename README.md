@@ -1,66 +1,73 @@
-# 💳 Credit Risk Prediction Model – Lauki Finance
+# 💳 Credit Risk Prediction Model — Lauki Finance
 
-A machine learning–powered Credit Risk Assessment system that predicts the probability of loan default and generates a credit score and rating. The project includes data preprocessing, feature engineering, model training, Optuna hyperparameter tuning, and a fully interactive Streamlit UI.
+[![GitHub license](https://img.shields.io/github/license/Ayush1202R/Credit-approval-model?style=flat-square)](https://github.com/Ayush1202R/Credit-approval-model/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Ayush1202R/Credit-approval-model?style=flat-square)](https://github.com/Ayush1202R/Credit-approval-model/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Ayush1202R/Credit-approval-model/pulls)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Streamlit-brightgreen?style=flat-square)](https://credit-approval-model-ml.streamlit.app/)
 
-## 🌐 Live Demo
-👉 **[Click here to open the Credit Risk Model](https://credit-approval-model-ml.streamlit.app/)**
+An end-to-end Machine Learning–powered credit risk assessment system built to predict the probability of default, assign credit scores, and categorize loan applications. 
 
-## 📌 Overview
-This project predicts whether a borrower is likely to default on a loan using demographic, financial, and credit-related inputs. It also generates:
-- **Default Probability**
-- **Credit Score**
-- **Credit Category (Poor / Average / Good / Excellent)**  
-Designed for financial institutions to enhance loan evaluation and minimize risk.
+Features data preprocessing, categorical encoding, model training, Optuna hyperparameter optimization, and a fully interactive Streamlit UI.
 
-## ✨ Key Features
-- End-to-end credit risk model  
-- Clean and interactive Streamlit interface  
-- Takes 10+ borrower inputs  
-- Calculates default probability, credit score, and rating  
-- Optuna hyperparameter tuning for model optimization  
-- Fully deployed and accessible online  
+---
 
-## 🧠 Machine Learning Workflow
-- Data Cleaning & Preparation  
-- Handling invalid/missing values  
-- Encoding categorical features  
-- Train-Test Split  
-- Logistic Regression Model  
-- Optuna Hyperparameter Optimization  
-- Evaluation Metrics (AUC, Gini, KS)  
-- Saving model using joblib  
-- Deployment with Streamlit  
+## 🌟 Key Features
 
-## 📊 Input Parameters
-- Age  
-- Income  
-- Loan Amount  
-- Loan Tenure  
-- Loan Purpose  
-- Avg DPD  
-- Delinquency Ratio  
-- Credit Utilization Ratio  
-- Residence Type  
-- Loan Type  
-- Number of Open Accounts  
+* **Default Probability Estimator**: Uses a Logistic Regression classifier optimized using Optuna.
+* **Credit Scoring Algorithm**: Translates default probability into a standard credit score ranging from $300$ to $900$.
+* **Risk Categorization**: Automatically groups applicants into ratings: `Poor`, `Average`, `Good`, or `Excellent` risk profiles.
+* **Tuning Pipelines**: Pre-configured hyperparameter optimization loops using Optuna for maximum precision.
+* **Interactive Form Dashboard**: Streamlit interface taking demographic, financial, and credit-history parameters.
 
-## 🛠 Tech Stack
-- **Python**  
-- **Scikit-Learn**  
-- **Optuna**  
-- **Streamlit**  
-- **Pandas**  
-- **NumPy**  
-- **Joblib**
+---
 
-## ▶ How to Run Locally
+## 📊 Evaluation Parameters
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Ayush1202R/Credit-approval-model.git
+The system evaluates credit risk using 11 key parameters:
+1. **Age**: Applicant age (years).
+2. **Income**: Annual gross earnings ($).
+3. **Loan Amount**: Requested loan amount ($).
+4. **Loan Tenure**: Requested repayment duration (months).
+5. **Loan Purpose**: Categorical reason for borrowing.
+6. **Average DPD (Days Past Due)**: History of delayed payments.
+7. **Delinquency Ratio**: Ratio of past delinquent accounts.
+8. **Credit Utilization Ratio**: Percentage of revolving credit limit used.
+9. **Residence Type**: Owner / Renting status.
+10. **Loan Type**: Secured / Unsecured loan category.
+11. **Number of Open Accounts**: Active borrowing accounts.
+
+---
+
+## 📂 Project Structure
+
+```text
+Credit-approval-model/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── PULL_REQUEST_TEMPLATE.md
+├── artifacts/              # Pre-trained models and scaler states
+├── CONTRIBUTING.md
+├── LICENSE                  # MIT License
+├── main.py                  # Model training and Optuna optimization pipeline
+├── main_1.py                # Streamlit dashboard interface
+├── prediction_helper.py     # Utility functions for predictions and credit scoring
+├── README.md                # Documentation
+└── requirements.txt         # Dependencies
 ```
 
-### 2. Install Dependencies
+---
+
+## 🛠️ Run Locally
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Ayush1202R/Credit-approval-model.git
+cd Credit-approval-model
+```
+
+### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -69,12 +76,3 @@ pip install -r requirements.txt
 ```bash
 streamlit run main_1.py
 ```
-
-
-## 📈 Model Output
-- **Default Probability (0–1)**  
-- **Credit Score (0–900)**  
-- **Rating:** Poor / Average / Good / Excellent  
-
-## Author
-**Ayush Radharaman Pandey**
